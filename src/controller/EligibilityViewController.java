@@ -38,6 +38,7 @@ public class EligibilityViewController extends HttpServlet {
 		int height=Integer.parseInt(request.getParameter("height"));
 		int weight=Integer.parseInt(request.getParameter("weight"));
 		String country=request.getParameter("country");
+		String answers="1,2,3,4,5,6,7,8,9,10";
 		
 		User user = new User(name,number,age,height,weight,country);
 		user.setName(name);
@@ -48,7 +49,7 @@ public class EligibilityViewController extends HttpServlet {
 		user.setCountry(country);
 		
 		BasicEligibility eligible=new EligibiltyCheck();
-		boolean spaceEligible = eligible.basicEligibilityCheck(user);
+		boolean spaceEligible = eligible.basicEligibilityCheck(user,answers);
 		
 			if(spaceEligible)
 			{
