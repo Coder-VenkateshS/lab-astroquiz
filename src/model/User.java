@@ -7,6 +7,7 @@ private int age;
 private int height;
 private int weight;
 private String country;
+
 public User(String name, String number, int age, int height, int weight, String country) {
 	super();
 	this.name = name;

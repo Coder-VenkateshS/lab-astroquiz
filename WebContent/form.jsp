@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Astroquiz</title>
 <link rel="stylesheet" href="./asset/style.css" /> 
 </head>
 <body>

@@ -37,6 +37,7 @@ public class EligibilityViewController extends HttpServlet {
 		int height=Integer.parseInt(request.getParameter("height"));
 		int weight=Integer.parseInt(request.getParameter("weight"));
 		String country=request.getParameter("country");
+		String answers="1,2,3,4,5,6,7,8,9,10";
 		
 	
 		User user = new User(name,number,age,height,weight,country);
@@ -48,8 +49,13 @@ public class EligibilityViewController extends HttpServlet {
 		user.setCountry(country);
 		
 		BasicEligibility eligible=new EligibiltyCheck();
+<<<<<<< HEAD
 		boolean spaceEligible = eligible.basicEligibilityCheck(user);
 		System.out.println(spaceEligible);
+=======
+		boolean spaceEligible = eligible.basicEligibilityCheck(user,answers);
+		
+>>>>>>> da8f0c69a72dfe8a808533ee4696ced020ff116d
 			if(spaceEligible)
 			{
 				RequestDispatcher rd=this.getServletContext().getRequestDispatcher("/WEB-INF/views/quiz.jsp");
